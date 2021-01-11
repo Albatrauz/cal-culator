@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import {useFirebaseApp} from 'reactfire';
 import 'firebase/auth';
+import 'firebase/database';
 
 const SignUp = () => {
 
@@ -16,6 +17,14 @@ const SignUp = () => {
       ...user,
       [e.target.name]: e.target.value,
       error: '',
+    });
+  }
+
+  const writeUserData = (userId, name, email) => {
+    firebase.database().ref('users/' + userId).set({
+      username: name,
+      email: email,
+      uid: userId,
     });
   }
 
@@ -40,7 +49,9 @@ const SignUp = () => {
                 setUser({
                   ...user,
                   verifyEmail: `Welcome ${user.nickname}. To continue please verify your email.`,
-                })
+                });
+                const userId = Date.now();
+                writeUserData(userId, user.nickname, user.email);
               })
               .catch(error => {
                 setUser({

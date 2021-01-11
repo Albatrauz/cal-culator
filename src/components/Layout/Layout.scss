@@ -1,3 +1,12 @@
 main {
-    background-color: red;
+    display: flex;
+    max-width: 40vw;
+    flex-flow: column;
+    justify-content: center;
+    margin: 0 auto;
+    color: var(--highlight);
+    border-radius: var(--space);
+    border: 3px solid var(--highlight);
+    font-family: var(--fontbrand);
+    padding: var(--space);
 }
