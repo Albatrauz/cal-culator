@@ -1,8 +1,8 @@
-import styles from './Logout.scss';
+import styles from './Logout.module.scss';
 import { useFirebaseApp } from "reactfire";
 import "firebase/auth";
 
-const Logout = (props) => {
+const Logout = ({ user }) => {
   // Import firebase
   const firebase = useFirebaseApp();
 
@@ -13,8 +13,7 @@ const Logout = (props) => {
 
   return (
     <>
-      <h1>Hello {props.user.displayName}</h1>
-      <button className={styles.btnPrimary} type="button" onClick={handleClick}>
+      <button className={styles.button} type="button" onClick={handleClick}>
         Log Out
       </button>
     </>

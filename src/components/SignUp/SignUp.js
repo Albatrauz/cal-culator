@@ -50,7 +50,7 @@ const SignUp = () => {
                   ...user,
                   verifyEmail: `Welcome ${user.nickname}. To continue please verify your email.`,
                 });
-                const userId = Date.now();
+                const userId = result.user.uid;
                 writeUserData(userId, user.nickname, user.email);
               })
               .catch(error => {

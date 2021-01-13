@@ -4,6 +4,7 @@ import SignUp from "./components/SignUp/SignUp";
 import Login from "./components/LogIn/LogIn";
 import { useUser, useDatabase } from "reactfire";
 import Logout from "./components/Logout/Logout";
+import BodyData from './components/BodyData/BodyData';
 
 function App(props) {
   const {data: user} = useUser();
@@ -14,6 +15,7 @@ function App(props) {
       <Layout>
         { user ?
             <>
+              <BodyData user={user} />
               <Logout user={user} />
             </>
           :

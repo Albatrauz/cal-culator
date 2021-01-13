@@ -1,6 +1,6 @@
 /*----------------------------------------------------------------------------\\\\
-    Logout
-    Logout styling
+    BodyData
+    Styling of BodyData component
 \\\\----------------------------------------------------------------------------/
 
 /*  Variables
@@ -12,8 +12,7 @@
 /*  Component
 \\\\----------------------------------------------------------------------------*/
 
-.btnPrimary {
-    background-color: var(--highlight);
-    color: var(--base);
-    border: none;
+.bodydataWrapper {
+    display: flex;
+    flex-flow: column;
 }
