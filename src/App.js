@@ -1,7 +1,7 @@
 import "./App.scss";
 import Layout from "./components/Layout/Layout";
 import SignUp from "./components/SignUp/SignUp";
-import Login from "./components/LogIn/LogIn";
+import Login from "./components/Login/Login";
 import { useUser, useDatabase } from "reactfire";
 import Logout from "./components/Logout/Logout";
 import BodyData from './components/BodyData/BodyData';

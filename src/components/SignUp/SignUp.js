@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import {useFirebaseApp} from 'reactfire';
+import styles from './SignUp.module.scss';
 import 'firebase/auth';
 import 'firebase/database';
 
@@ -78,7 +79,7 @@ const SignUp = () => {
           <input type="text" placeholder="Nickname" name="nickname" onChange={handleChange}/><br />
           <input type="text" placeholder="Email" name="email" onChange={handleChange}/><br />
           <input type="password" placeholder="Password" name="password" onChange={handleChange}/><br />
-          <button type="submit">Sign Up</button>
+          <button className={styles.button} type="submit">Sign Up</button>
         </form>
         {user.error && <h4>{user.error}</h4>}
       </>

@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import {useFirebaseApp} from 'reactfire';
+import styles from './Login.module.scss'
 import 'firebase/auth';
 
 const Login = () => {
@@ -51,7 +52,7 @@ const Login = () => {
         <form onSubmit={handleSubmit}>
           <input type="text" placeholder="Email" name="email" onChange={handleChange}/><br />
           <input type="password" placeholder="Password" name="password" onChange={handleChange}/><br />
-          <button type="submit">Log in</button>
+          <button className={styles.button} type="submit">Log in</button>
         </form>
         {user.error && <h4>{user.error}</h4>}
       </>

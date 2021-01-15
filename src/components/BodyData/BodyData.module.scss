@@ -14,5 +14,36 @@
 
 .bodydataWrapper {
     display: flex;
-    flex-flow: column;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+input {
+    font-family: var(--fontbrand);
+    padding: 3px;
+    border-radius: 3px;
+    font-size: 16px;
+    color: var(--highlight);
+    border: none;
+    width: 100%;
+    background-color: darken(#364F6B, 5%);
+    margin-bottom: 6px;
+    &:focus-within {
+        outline: 0;
+    }
+}
+
+.bodydataLabel {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.bodydataItem {
+    display: block;
+    flex-basis: 50%;
+
+    &:not(:first-child) {
+        margin-left: 24px;
+    }
 }

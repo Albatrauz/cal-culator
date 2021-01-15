@@ -57,11 +57,19 @@ const BodyData = (props) => {
 
   return (
     <div className={styles.bodydataWrapper}>
-      <div>Lengte</div>
-      <input type="text" name="length" onBlur={inputHandler} />
-      <div>Gewicht</div>
-      <input type="text" name="weight" onBlur={inputHandler} />
-      <p>Your BMI is {bodydata.bmi}</p>
+      <div className={styles.bodydataItem}>
+        <div className={styles.bodydataLabel}>Length</div>
+        <input type="text" name="length" onBlur={inputHandler} />
+      </div>
+      <div className={styles.bodydataItem}>
+        <div className={styles.bodydataLabel}>Weight</div>
+        <input type="text" name="weight" onBlur={inputHandler} />
+      </div>
+      { bodydata.bmi ?
+          <p>Your BMI is {bodydata.bmi}</p>
+          :
+          null
+      }
     </div>
   );
 }
