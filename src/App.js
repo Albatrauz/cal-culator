@@ -1,18 +1,17 @@
 import "./App.scss";
 import Layout from "./components/Layout/Layout";
-import SignUp from "./components/SignUp/SignUp";
-import Login from "./components/Login/Login";
+import SignUp from "./components/Auth/SignUp/SignUp";
+import Login from "./components/Auth/Login/Login";
 import { useUser, useDatabase } from "reactfire";
-import Logout from "./components/Logout/Logout";
+import Logout from "./components/Auth/Logout/Logout";
 import BodyData from './components/BodyData/BodyData';
 
 function App(props) {
   const {data: user} = useUser();
   const {data: userData} = useDatabase();
-  console.log(user);
   return (
     <div>
-      <Layout>
+      <Layout user={user}>
         { user ?
             <>
               <BodyData user={user} />

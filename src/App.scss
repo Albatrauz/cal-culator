@@ -7,9 +7,11 @@
     --highlight: #fc5185;
     --fontbrand: 'Work Sans', sans-serif;
     --space: 12px;
+    --max-width: 68.75rem;
 }
 
 
 body {
     background-color: var(--base);
+    margin: 0;
 }

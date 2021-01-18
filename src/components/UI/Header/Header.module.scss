@@ -1,0 +1,62 @@
+/*----------------------------------------------------------------------------\\\\
+    Header
+    Styling of the header component
+\\\\----------------------------------------------------------------------------/
+
+/*  Variables
+\\\\----------------------------------------------------------------------------*/
+
+    $header-color: darken(#364F6B, 5%);
+
+
+/*  Component
+\\\\----------------------------------------------------------------------------*/
+
+header {
+    background-color: $header-color;
+    display: flex;
+    flex-direction: row;
+    color: var(--text);
+    width: 100vw;
+    padding: 6px 0;
+    font-family: var(--fontbrand);
+    justify-content: center;
+}
+
+.headerContainer {
+    max-width: var(--max-width);
+    flex-grow: 1;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+}
+
+.headerLogo {
+    color: var(--primary);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: flex-end;
+}
+ul.navWrapper {
+    justify-content: flex-end;
+    padding: 0;
+    flex-grow: 1;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+
+    li {
+        list-style-type: none;
+
+        &:not(:last-child) {
+            padding-right: 12px;
+        }
+    }
+}
